@@ -7,10 +7,17 @@
  */
 int main(void)
 {
-printf("Size of a char: %lu bytes(s)\n", sizeof(char));
-printf("Size of a int: %lu bytes(s)\n", sizeof(int));
-printf("Size of a long int: %lu bytes(s)\n", sizeof(long int));
-printf("Size of a long long int: %lu bytes(s)\n", sizeof(long long int));
-printf("Size of a float: %lu bytes(s)\n", sizeof(float));
+size32
+Size of a char: 1 byte(s)
+Size of an int: 4 byte(s)
+Size of a long int: 4 byte(s)
+Size of a long long int: 8 byte(s)
+Size of a float: 4 byte(s)
+size64
+Size of a char: 1 byte(s)
+Size of an int: 4 byte(s)
+Size of a long int: 8 byte(s)
+Size of a long long int: 8 byte(s)
+Size of a float: 4 byte(s)
 return (0);
 }

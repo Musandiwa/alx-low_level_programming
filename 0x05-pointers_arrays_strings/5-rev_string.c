@@ -27,5 +27,5 @@ void rev_string(char *s)
 			*(str + (j - 1)) = temp;
 		}
 	}
-}		
+ }		
 

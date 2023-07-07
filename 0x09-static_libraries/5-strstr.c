@@ -1,52 +1,31 @@
 #include "main.h"
-
 /**
- * _strstr - Entry point
-<<<<<<< HEAD
- * @haystack: input
- * @needle: input
-=======
- * @haystack: input 
- * @needle: input 
->>>>>>> d5d77b66103dadf1e072ef2daa6c2d795bfae4d3
- * Return: Always 0 (Success)
+ * _strstr - locates substring
+ * @haystack: string to locte
+ * @needle: substring to locate
+ * Return: returns string at starting sub or null
  */
 char *_strstr(char *haystack, char *needle)
 {
-<<<<<<< HEAD
-        for (; *haystack != '\0'; haystack++)
-        {
-                char *l = haystack;
-                char *p = needle;
+	int i;
+	int j;
 
-                while (*l == *p && *p != '\0')
-                {
-                        l++;
-                        p++;
-                }
+	if (needle[0] == '\0')
+		return (haystack);
 
-                if (*p == '\0')
-                        return (haystack);
-        }
-
-        return (0);
-=======
-	for (; *haystack != '\0'; haystack++)
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		char *l = haystack;
-		char *p = needle;
-
-		while (*l == *p && *p != '\0')
+		if (haystack[i] == needle[0])
 		{
-			l++;
-			p++;
+			for (j = 0; needle[j] != '\0'; j++)
+			{
+				if (haystack[i + j] != needle[j])
+					break;
+			}
+			if (needle[j] == '\0')
+				return (haystack + i);
 		}
 
-		if (*p == '\0')
-			return (haystack);
 	}
-
-	return (0);
->>>>>>> d5d77b66103dadf1e072ef2daa6c2d795bfae4d3
+	return ('\0');
 }
-

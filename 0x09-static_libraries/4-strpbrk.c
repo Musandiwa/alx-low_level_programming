@@ -1,44 +1,24 @@
-#include "main.h"
-
 /**
- * _strpbrk - Entry point
-<<<<<<< HEAD
- * @s: input
- * @accept: input
-=======
- * @s: input 
- * @accept: input 
->>>>>>> d5d77b66103dadf1e072ef2daa6c2d795bfae4d3
- * Return: Always 0 (Success)
+ * _strpbrk - finds string
+ * @s: string to find stuff
+ * @accept: accepting arrays
+ *
+ * Return: returns new value
  */
 char *_strpbrk(char *s, char *accept)
 {
-<<<<<<< HEAD
-        int k;
+	int i;
+	int j;
 
-        while (*s)
-        {
-                for (k = 0; accept[k]; k++)
-                {
-                if (*s == accept[k])
-                return (s);
-                }
-        s++;
-        }
-=======
-	int k;
-
-	while (*s)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (k = 0; accept[k]; k++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-		if (*s == accept[k])
-		return (s);
+			if (s[i] == accept[j])
+			{
+				return (s + i);
+			}
 		}
-	s++;
 	}
->>>>>>> d5d77b66103dadf1e072ef2daa6c2d795bfae4d3
-
-return ('\0');
+	return (0);
 }
-

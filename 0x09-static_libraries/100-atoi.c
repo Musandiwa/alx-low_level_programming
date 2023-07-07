@@ -1,43 +1,46 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
- * _atoi - convert a string into an integer.
-<<<<<<< HEAD
+ * _atoi - converts string to integer
+ * @s: string to convert
  *
-=======
- * 
->>>>>>> d5d77b66103dadf1e072ef2daa6c2d795bfae4d3
- * @s: the string to use.
- *
- * Return: integer.
+ * Return: returns integer value
  */
 int _atoi(char *s)
 {
-        int sign = 1, i = 0;
-        unsigned int res = 0;
+	int i;
+	int np = 0;
+	int c;
+	int d = 1;
+	int num = 0;
 
-        while (!(s[i] <= '9' && s[i] >= '0') && s[i] != '\0')
-        {
-<<<<<<< HEAD
-                if (s[i] == '-')
-                        sign *= -1;
-=======
+	for (i = 0; i < _strlen(s); i++)
+	{
+		if (!(s[i] >= '0' && s[i] <= '9') && c > 0)
+			break;
 		if (s[i] == '-')
-			sign *= -1;
->>>>>>> d5d77b66103dadf1e072ef2daa6c2d795bfae4d3
-                i++;
-        }
-        while (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
-        {
-<<<<<<< HEAD
-                res = (res * 10) + (s[i] - '0');
-                i++;
-=======
-		res = (res * 10) + (s[i] - '0');
-		i++;
->>>>>>> d5d77b66103dadf1e072ef2daa6c2d795bfae4d3
-        }
-        res *= sign;
-       return (res);
+			np--;
+		if (s[i] == '+')
+			np++;
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			c++;
+		}
+	}
+	while (c > 0)
+	{
+		num += ((s[i - 1] - '0') * d);
+		i--;
+		c--;
+		d *= 10;
+	}
+	if (np >= 0)
+	{
+		num *= 1;
+	} else
+	{
+		num *= -1;
+	}
+	return (num);
 }
-

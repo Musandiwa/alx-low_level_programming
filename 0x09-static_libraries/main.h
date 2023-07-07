@@ -23,4 +23,7 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
 #endif /* MAIN_H */
+<<<<<<< HEAD
 
+=======
+>>>>>>> d5d77b66103dadf1e072ef2daa6c2d795bfae4d3
